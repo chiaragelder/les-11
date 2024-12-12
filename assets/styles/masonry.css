@@ -1,0 +1,101 @@
+.text-container {
+  max-width: 800px; /* Max breedte voor de tekst */
+  margin: 0 auto;
+  padding: 0 8px; /* Ruimte rondom de tekst */
+}
+
+.masonry {
+  width: calc(100% + 32px); /* Maak de masonry breder dan de tekstcontainer */
+  margin: 0 -16px; /* Laat het uitsteken aan beide kanten */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Altijd 4 kolommen */
+  gap: 16px; /* Ruimte tussen afbeeldingen */
+}
+
+.masonry-image img {
+  width: 100%; /* Vul de volledige kolombreedte */
+  max-width: 800px; /* Optioneel: beperk de maximale breedte van de afbeelding */
+  height: auto; /* Behoud de verhouding van de afbeelding */
+  object-fit: cover; /* Zorg ervoor dat de afbeelding netjes past */
+  margin: 0 auto; /* Centreer de afbeelding als er ruimte over is */
+}
+
+
+@media (max-width: 1024px) {
+  .masonry {
+    grid-template-columns: repeat(5, 1fr); /* 3 kolommen op tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Kleinere minimumgrootte */
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry {
+    grid-template-columns: 1fr; /* Een enkele kolom op zeer kleine schermen */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 12px; /* Hou marges ook op kleinere schermen */
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 8px; /* Nog kleinere marges voor mobiele apparaten */
+  }
+}
+
+.full-width-container {
+  width: calc(100% - 32px); /* Breder dan de tekst maar met marges */
+  max-width: 1200px; /* Limiteer de maximale breedte */
+  margin: 0 auto;
+  padding: 16px;
+}
+
+@media (max-width: 480px) {
+  .full-width-container {
+    width: calc(100% - 16px); /* Nog steeds marges behouden */
+    padding: 8px;
+  }
+}
+
+.gallery-container {
+  padding-top: 4rem; /* Extra padding bovenaan */
+  padding-bottom: 6rem; /* Extra padding onderaan */
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.image-gallery-padding {
+  padding: 2rem; /* Padding rondom de ImageGallery */
+}
+
+@media (min-width:1024px) {
+  .lg\:mb-3 {
+    margin-bottom: 0.75rem;
+    margin-left: 0em;
+    margin-right: 7em;
+  }
+}
+
+
+
+
